@@ -39,11 +39,16 @@ document.addEventListener("DOMContentLoaded", function(event){
             alert('Please enter a number!');
         }
     });
-
-    /* Deleting all entries*/
-    clear.addEventListener('click', function(evenet){
+    /* Clearing all entries*/
+    clear.addEventListener('click', function(event){
         initialValue = "";
         result.innerHTML = initialValue;
+    })
+
+    /* Deleting a single entry*/
+    deleteSingleNum.addEventListener('click', function(event){
+        initialValue = initialValue.slice(0, -1);
+        result.innerHTML = initialValue
     })
 
 });
