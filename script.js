@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(event){
         }
     });
 
-    /* writing your calculation */
+    /* Doing Calculation */
     let initialValue = "";
     normalButton.forEach((normalButton, index)=>{
         normalButton.addEventListener('click', function(){
@@ -30,6 +30,20 @@ document.addEventListener("DOMContentLoaded", function(event){
             result.innerHTML = initialValue;
         });
     });   
+    equalTo.addEventListener('click', function(event){
+        if(initialValue != ""){
+            history.innerHTML = result.innerHTML;
+            result.innerHTML = eval(result.innerHTML);
+            initialValue = eval(result.innerHTML);
+        }else{
+            alert('Please enter a number!');
+        }
+    });
 
-    
+    /* Deleting all entries*/
+    clear.addEventListener('click', function(evenet){
+        initialValue = "";
+        result.innerHTML = initialValue;
+    })
+
 });
