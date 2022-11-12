@@ -21,5 +21,15 @@ document.addEventListener("DOMContentLoaded", function(event){
         }
     });
 
+    /* writing your calculation */
+    let initialValue = "";
+    normalButton.forEach((normalButton, index)=>{
+        normalButton.addEventListener('click', function(){
+            let text = this.innerHTML;
+            initialValue = initialValue + text;
+            result.innerHTML = initialValue;
+        });
+    });   
 
+    
 });
